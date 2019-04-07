@@ -1,4 +1,4 @@
-ESX = nil
+﻿ESX = nil
 Cache = {
     CooldownTimestamp = 0,
     TableSize = 0,
@@ -41,7 +41,7 @@ function RegisterEvent(event, func)
     AddEventHandler(event, func)
 end
 
-exports["mysql-hook"]:callback(function()
+MySQL.ready(function()
     MySQL.Async.fetchAll("SELECT * FROM houserobbery", {}, function(cooldown)
         local row = true
 
