@@ -1,4 +1,9 @@
-﻿ESX = nil
+ESX = nil
+
+TriggerEvent("esx:getSharedObject", function(library)
+    ESX = library
+end)
+
 Cache = {
     CooldownTimestamp = 0,
     TableSize = 0,
@@ -13,16 +18,16 @@ Config = {
     LootAvailable = {
         ["WEAPON_PISTOL"] = 25,
         ["WEAPON_REVOLVER"] = 8,
-        ["iphone"] = 1,
+        --["iphone"] = 1,
         ["gps"] = 1,
         ["fishing_rod"] = 1,
         ["fishing_lure"] = 5,
-        ["pink_dildo"] = 1,
+        --["pink_dildo"] = 1,
         ["drill"] = 1,
-        ["bennys_off"] = 1,
-        ["bennys_off1"] = 1,
-        ["bilfirma_off"] = 1,
-        ["bilfirma_off1"] = 1,
+       -- ["bennys_off"] = 1,
+       -- ["bennys_off1"] = 1,
+        --["bilfirma_off"] = 1,
+        --["bilfirma_off1"] = 1,
         ["weed"] = 5,
         ["Salmon"] = 3,
         ["Bass"] = 1,
@@ -31,10 +36,6 @@ Config = {
     },
     GracePeriod = 30
 }
-
-TriggerEvent("esx:getSharedObject", function(library)
-    ESX = library
-end)
 
 function RegisterEvent(event, func)
     RegisterServerEvent(event)
